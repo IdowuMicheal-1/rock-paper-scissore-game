@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .bg-color {
+        @apply bg-gradient-to-br from-radialGradient to-toRadialGradient min-h-screen py-8 px-8 flex flex-col;
+    }
+}
+
+@layer utilities {
+    .bg-gradient-radial {
+      background-image: radial-gradient(circle, var(--tw-gradient-stops));
+    }
+  }
+  
