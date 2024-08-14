@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext, useState} from 'react'
 import rock from '../assets/images/icon-rock.svg'
 import paper from '../assets/images/icon-paper.svg'
 import scissors from '../assets/images/icon-scissors.svg'
@@ -6,10 +6,16 @@ import scissors from '../assets/images/icon-scissors.svg'
 import triangle from '../assets/images/bg-triangle.svg'
 import ScoreTab from '../components/ScoreTab'
 import RuleBtn from '../components/RuleBtn'
+import Rule from '../components/Rule'
+import { RuleContext } from '../context/rule-provider'
 
 const Main = () => {
+  
+  const {showRule, setShowRule} = useContext(RuleContext)
   return (
     <div className='bg-color'>
+      {showRule &&  <Rule />}
+     
         {/* Score Tab */}
         <ScoreTab />
 
