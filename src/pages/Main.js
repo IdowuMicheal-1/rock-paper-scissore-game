@@ -20,13 +20,13 @@ const Main = () => {
         <ScoreTab />
 
         {/* Boby  */}
-        <div className='md:max-w-2xl md:mx-auto md:px-28 md:py-4 mx-auto mt-24'>
+        <div className='md:max-w-2xl md:mx-auto md:px-28 md:py-4 mx-auto mt-24 mb-14'>
             <div className='px-8 py-4 relative mx-auto'>
                 <img src={triangle}  alt='triangle'/>
                 <div>
-                    <img src={rock} alt='rock' className='absolute top-0 left-0 mt-44 ml-32 bg-white rounded-full p-6 border-rockGradient border-12'/>
+                    <img src={rock} alt='rock' className='absolute top-0 left-0 mt-44 ml-[6.5rem] bg-white rounded-full p-6 border-rockGradient border-12'/>
                     <img src={paper} alt='paper' className='absolute top-0 left-0 ml-5 bg-white rounded-full p-5 border-paperGradient border-12'/>
-                    <img src={scissors} alt='scissors' className='absolute top-0 left-0 ml-60 bg-white rounded-full p-4 border-scissorsGradient border-12'/>
+                    <img src={scissors} alt='scissors' className='absolute top-0 left-0 ml-[13rem] bg-white rounded-full p-5 border-scissorsGradient border-12'/>
                 </div>
             </div>
         </div>
