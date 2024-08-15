@@ -41,9 +41,9 @@ const Main = () => {
             <div className='px-8 py-4 relative mx-auto'>
                 <img src={triangle}  alt='triangle' className='w-[100%] h-[100%]'/>
                 <div>
-                    <img onClick = {getRockHandler} src={rock} alt='rock' className='absolute top-0 left-0 mt-44 ml-[6.5rem] bg-white rounded-full p-6 border-rockGradient border-12 lg:ml-[8rem] md:ml-[8rem]' />
-                    <img onClick = {getPaperHandler} src={paper} alt='paper' className='absolute top-0 left-0 ml-5 bg-white rounded-full p-5 border-paperGradient border-12'/>
-                    <img onClick = {getScissorsHandler} src={scissors} alt='scissors' className='absolute top-0 left-0 ml-[13rem] bg-white rounded-full p-5 border-scissorsGradient border-12 lg:ml-[16rem] md:ml-[15rem]'/>
+                    <img onClick = {getRockHandler} src={rock} alt='rock' className='absolute top-0 left-0 mt-44 ml-[6.5rem] bg-white rounded-full p-6 border-rockGradient border-12 lg:ml-[8rem] md:ml-[8rem] cursor-pointer hover:border-toRockGradient' />
+                    <img onClick = {getPaperHandler} src={paper} alt='paper' className='absolute top-0 left-0 ml-5 bg-white rounded-full p-5 border-paperGradient border-12 cursor-pointer hover:border-toPaperGradient'/>
+                    <img onClick = {getScissorsHandler} src={scissors} alt='scissors' className='absolute top-0 left-0 ml-[13rem] bg-white rounded-full p-5 border-scissorsGradient border-12 lg:ml-[16rem] md:ml-[15rem] cursor-pointer hover:border-toScissorsGradient'/>
                 </div>
             </div>
         </div>

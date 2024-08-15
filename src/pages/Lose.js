@@ -47,8 +47,8 @@ const Lose = () => {
         </div>
 
         <div className='hidden md:flex md:flex-col items-center'>
-            <h4 className='text-white text-5xl lg:text-4xl font-serif font-bold mb-2'>YOU LOSE</h4>
-            <p className='font-serif text-rockGradient bg-white w-56 rounded-md text-lg font-bold text-center px-2 py-2 cursor-pointer' onClick={redirectHandler}>PLAY AGAIN</p>
+            <h4 className='text-white text-5xl lg:text-4xl font-serif font-bold mb-2 '>YOU LOSE</h4>
+            <p className='font-serif text-rockGradient bg-white w-56 rounded-md text-lg font-bold text-center px-2 py-2 cursor-pointer hover:bg-gray-100' onClick={redirectHandler}>PLAY AGAIN</p>
         </div>
 
         <div className='flex flex-col items-center'>
@@ -70,7 +70,7 @@ const Lose = () => {
         </div>
         <div className='mt-14 mx-auto flex flex-col items-center md:hidden'>
             <h4 className='text-white text-5xl font-serif font-bold mb-2'>YOU LOSE</h4>
-            <p className='font-serif text-scoreText bg-white w-56 rounded-md text-xl font-bold text-center px-2 py-4 cursor-pointer' onClick={redirectHandler}>PLAY AGAIN</p>
+            <p className='font-serif text-scoreText bg-white w-56 rounded-md text-xl font-bold text-center px-2 py-4 cursor-pointer hover:bg-gray-100' onClick={redirectHandler}>PLAY AGAIN</p>
         </div>
 
         {/* Rules */}

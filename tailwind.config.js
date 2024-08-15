@@ -11,6 +11,7 @@ module.exports = {
         paperGradient:'hsl(230, 89%, 62%)',
         toPaperGradient:'hsl(230, 89%, 65%)',
         rockGradient:'hsl(349, 71%, 52%)',
+        toRockGradient:'hsl(349, 70%, 56%)',
         lizardGradient:'hsl(261, 73%, 60%)',
         toLizardGradient:'hsl(261, 72%, 63%)',
         cyan:'hsl(189, 59%, 53%)',
