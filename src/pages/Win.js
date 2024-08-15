@@ -1,12 +1,25 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import rock from '../assets/images/icon-rock.svg'
 import scissors from '../assets/images/icon-scissors.svg'
+import paper from '../assets/images/icon-paper.svg'
 import ScoreTab from '../components/ScoreTab'
 import RuleBtn from '../components/RuleBtn'
+import { useNavigate } from 'react-router-dom'
+import { RuleContext } from '../context/rule-provider'
+import Rule from '../components/Rule'
 
 const Win = () => {
+    
+    const navigate = useNavigate()
+    const redirectHandler = () => {
+        navigate('/')
+    }
+
+    const {choice,setChoice,randomNumbers,showRule} = useContext(RuleContext)
   return (
     <div>
+        
+        {showRule &&  <Rule />}
         <div className='bg-color'>
         {/* Scores */}
         <ScoreTab />
@@ -21,25 +34,44 @@ const Win = () => {
 
         <div className='flex flex-col items-center justify-center'>
         <p className='hidden text-white uppercase font-serif font-semibold md:block md:mb-4'>You Picked</p>
-            <img src={rock} alt='rock' className='bg-white rounded-full p-6 border-rockGradient  md:border-18 md:p-10 border-12 mb-4'/>
+            {/* <img src={rock} alt='rock' className='bg-white rounded-full p-6 border-rockGradient  md:border-18 md:p-10 border-12 mb-4'/> */}
+            {
+            choice === 1 &&  <img src={rock} alt='rock' className='bg-white rounded-full p-6 border-rockGradient  md:border-18 md:p-10 border-12 mb-4'/>
+        }
+        {
+            choice === 2 &&  <img src={paper} alt='rock' className='bg-white rounded-full p-6 border-paperGradient  md:border-18 md:p-10 border-12 mb-4'/>
+        }
+        {
+            choice === 3 &&  <img src={scissors} alt='rock' className='bg-white rounded-full p-6 border-scissorsGradient  md:border-18 md:p-10 border-12 mb-4'/>
+        }
             <p className='md:hidden text-white uppercase font-serif font-semibold'>You Picked</p>
         </div>
 
         <div className='hidden md:flex md:flex-col items-center'>
-            <h4 className='text-white text-5xl lg:text-4xl font-serif font-bold mb-2'>YOU LOSE</h4>
-            <p className='font-serif text-toRadialGradient bg-white w-56 rounded-md text-lg font-bold text-center px-2 py-2 cursor-pointer'>PLAY AGAIN</p>
+            <h4 className='text-white text-5xl lg:text-4xl font-serif font-bold mb-2'>YOU WIN</h4>
+            <p className='font-serif text-toRadialGradient bg-white w-56 rounded-md text-lg font-bold text-center px-2 py-2 cursor-pointer' onClick={redirectHandler}>PLAY AGAIN</p>
         </div>
 
         <div className='flex flex-col items-center'>
         <p className='hidden text-white uppercase font-serif font-semibold md:block md:mb-4'>The house picked</p>
-        <img src={scissors} alt='rock' className='bg-white rounded-full p-4 border-scissorsGradient  md:border-18 md:p-8 border-12 mb-4'/>
+        {/* <img src={scissors} alt='rock' className='bg-white rounded-full p-4 border-scissorsGradient  md:border-18 md:p-8 border-12 mb-4'/> */}
+        {
+            randomNumbers === 1 && <img src={rock} alt='rock' className='bg-white rounded-full p-6 border-rockGradient  md:border-18 md:p-10 border-12 mb-4'/>
+        }
+            {
+            randomNumbers === 2 && <img src={paper} alt='rock' className='bg-white rounded-full p-6 border-paperGradient  md:border-18 md:p-10 border-12 mb-4'/>
+        }
+            {
+            randomNumbers === 3 && <img src={scissors} alt='rock' className='bg-white rounded-full p-6 border-scissorsGradient  md:border-18 md:p-10 border-12 mb-4'/>
+
+        }
             <p className='md:hidden text-white uppercase font-serif font-semibold'>The house picked</p>
         </div>
     </div>
         </div>
         <div className='mt-14 mx-auto flex flex-col items-center md:hidden'>
-            <h4 className='text-white text-5xl font-serif font-bold mb-2'>YOU LOSE</h4>
-            <p className='font-serif text-scoreText bg-white w-56 rounded-md text-xl font-bold text-center px-2 py-4 cursor-pointer'>PLAY AGAIN</p>
+            <h4 className='text-white text-5xl font-serif font-bold mb-2'>YOU WIN</h4>
+            <p className='font-serif text-scoreText bg-white w-56 rounded-md text-xl font-bold text-center px-2 py-4 cursor-pointer' onClick={redirectHandler}>PLAY AGAIN</p>
         </div>
 
         {/* Rules */}

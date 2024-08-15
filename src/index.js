@@ -9,6 +9,7 @@ import Checked from './pages/Checked';
 import Lose from './pages/Lose';
 import Win from './pages/Win';
 import { RuleProvider } from './context/rule-provider';
+import Draw from './pages/Draw';
 
 
 const router = createBrowserRouter ([
@@ -32,6 +33,10 @@ const router = createBrowserRouter ([
   {
     path:'/win',
     element:<Win />
+  },
+  {
+    path:'/draw',
+    element:<Draw />
   },
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
