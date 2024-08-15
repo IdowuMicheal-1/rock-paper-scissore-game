@@ -22,10 +22,10 @@ const router = createBrowserRouter ([
     path:'/game',
     element:<Choose />
   },
-  {
-    path:'/checked',
-    element:<Checked />
-  },
+  // {
+  //   path:'/checked',
+  //   element:<Checked />
+  // },
   {
     path:'/lose',
     element:<Lose />

@@ -6,6 +6,7 @@ import scissors from '../assets/images/icon-scissors.svg'
 
 const Checked = () => {
   return (
+    
     <div className='bg-color'>
         {/* Score */}
         <ScoreTab />

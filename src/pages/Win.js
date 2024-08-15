@@ -4,7 +4,7 @@ import scissors from '../assets/images/icon-scissors.svg'
 import paper from '../assets/images/icon-paper.svg'
 import ScoreTab from '../components/ScoreTab'
 import RuleBtn from '../components/RuleBtn'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Navigate } from 'react-router-dom'
 import { RuleContext } from '../context/rule-provider'
 import Rule from '../components/Rule'
 
@@ -17,7 +17,7 @@ const Win = () => {
 
     const {choice,setChoice,randomNumbers,showRule} = useContext(RuleContext)
   return (
-    <div>
+    choice ? (<div>
         
         {showRule &&  <Rule />}
         <div className='bg-color'>
@@ -77,7 +77,7 @@ const Win = () => {
         {/* Rules */}
         <RuleBtn />
     </div>
-    </div>
+    </div>) : (<Navigate to='/'/>)
   )
 }
 

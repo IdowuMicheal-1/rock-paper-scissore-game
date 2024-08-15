@@ -5,7 +5,7 @@ import rock from '../assets/images/icon-rock.svg';
 import paper from '../assets/images/icon-paper.svg';
 import scissors from '../assets/images/icon-scissors.svg';
 import { RuleContext } from '../context/rule-provider';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Choose = () => {
   const navigate = useNavigate();
@@ -63,12 +63,13 @@ const Choose = () => {
           navigate('/draw');
         }
       }
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [choice, random, navigate, setScore, score]);
 
   return (
+    choice ? 
     <div className='bg-color'>
       {/* Score */}
       <ScoreTab />
@@ -93,7 +94,7 @@ const Choose = () => {
       </div>
       {/* Rules */}
       <RuleBtn />
-    </div>
+    </div> : <Navigate to='/' />
   );
 };
 
