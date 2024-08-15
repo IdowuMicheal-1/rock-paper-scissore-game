@@ -10,13 +10,15 @@ import Lose from './pages/Lose';
 import Win from './pages/Win';
 import { RuleProvider } from './context/rule-provider';
 import Draw from './pages/Draw';
+import Error from './pages/Error';
 
 
 const router = createBrowserRouter ([
   {
     
     path:'/',
-    element:<App />
+    element:<App />,
+    errorElement:<Error />
   },
   {
     path:'/game',
